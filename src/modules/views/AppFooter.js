@@ -87,7 +87,7 @@ export default function AppFooter() {
             >
               <Grid item className={classes.icons}>
                 <a href="http://www.instagram.com/panda.pestcontrol" className={classes.icon}>
-                  <img src="/InstagramLogo.jpg" alt="Instagram" />
+                  <img src="/Instagramlogo.jpg" alt="Instagram" />
                 </a>
               </Grid>
               <Grid item>
