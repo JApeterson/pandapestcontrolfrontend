@@ -8,13 +8,14 @@ import {
   FormHelperText,
   TextField,
   MenuItem
-} from "@material-ui/core";
+} from "@mui/material";
 import Typography from './modules/components/Typography';
 import AppFooter from './modules/views/AppFooter';
 import AppAppBar from './modules/views/AppAppBar';
 import AppForm from './modules/views/AppForm';
 import * as Yup from "yup";
 import { Formik } from "formik";
+import axios from 'axios';
 
 // const useStyles = makeStyles((theme) => ({
 //   form: {
@@ -49,8 +50,7 @@ function Quote() {
         </React.Fragment>
         <Formik
           initialValues={{
-            toggle: false,
-            checked: [],
+            contactViaText: false,
             email: "",
             referral: "None",
             fullName: "",
@@ -65,20 +65,15 @@ function Quote() {
               .email("Must be a valid email")
               .max(255)
               .required("Email is required"),
-            password: Yup.string()
-              .max(255)
-              .required("a password with a minimum length of 8 characters, lowercase, uppercase, and numbers is required"),
-            confirmpassword: Yup.string().oneOf(
-              [Yup.ref("password"), null],
-              "Passwords must match"
-            ),
-            policy: Yup.boolean().oneOf(
-              [true],
-              "This field must be checked"
-            ),
           })}
           onSubmit={async (values) => {
+            console.log(values)
             try {
+              axios.post(
+                'https://sheet.best/api/sheets/7d44312f-42e3-4de2-bba3-7f5eda0208ea', { values }
+              ).then((res) => {
+                console.log(res)
+              })
               /*const newUser = await Auth.signUp({
                 username: values.email,
                 password: values.password,
@@ -230,7 +225,8 @@ function Quote() {
               <Box alignItems="center" display="flex" ml={-1}>
                 <Checkbox
                   color="primary"
-                  name="toggle"
+                  name="contactViaText"
+                  onChange={handleChange}
                 />
                 <Typography color="primary" variant="body1">
                   Can we contact you via text?                  </Typography>

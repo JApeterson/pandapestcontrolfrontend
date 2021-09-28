@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { withStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import { withStyles } from '@mui/styles';
+import { Container } from '@mui/material';
+
 
 const styles = (theme) => ({
   root: {

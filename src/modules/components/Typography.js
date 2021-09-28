@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import { capitalize } from '@material-ui/core/utils';
-import MuiTypography from '@material-ui/core/Typography';
+import MuiTypography from '@mui/material/Typography';
+import { capitalize } from '@mui/material/utils';
+import { withStyles } from '@mui/styles';
 
 const styles = (theme) => ({
   markedH2Center: {

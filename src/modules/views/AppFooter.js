@@ -1,7 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
+import { makeStyles } from '@mui/styles';
+import { Grid, Container } from '@mui/material';
 import Typography from '../components/Typography';
 import { Link } from "react-router-dom";
 

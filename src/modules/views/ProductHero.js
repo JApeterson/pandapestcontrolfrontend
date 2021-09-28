@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@mui/styles';
 import Button from '../components/Button';
 import ProductHeroLayout from './ProductHeroLayout';
 import { Link } from "react-router-dom";
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 // import Carousel from 'react-material-ui-carousel'
 
 //const images = ['./public/slideshow1.jpg', './slideshow2.jpg', './slideshow3.jpg', './slideshow4.jpg', './slideshow5.jpg', './slideshow6.jpg']
@@ -50,7 +50,6 @@ function ProductHero(props) {
       <Link to={"/quote"}>
 
         <Button
-          color="primary"
           variant="contained"
           size="large"
           className={classes.button}
@@ -60,7 +59,6 @@ function ProductHero(props) {
         </Button>
       </Link>
       <Typography>Panda Pest Control is Arizona's top rated eco-friendly pest control service. With over a decade of pest control experience, our team of pest control professionals are trained and equipped to protect your home or business. Using cutting edge technology along with best green pest control products, Panda Pest Control is able to deliver the best results.
-
         Although we are best known for our success rate in scorpion control; our five step regular protection program is what has disrupted the pest control industry in Arizona. Find out why we are Arizona's premier pest control company. </Typography>
 
     </ProductHeroLayout>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import { withStyles } from '@mui/styles';
+import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
 
 const styles = (theme) => ({

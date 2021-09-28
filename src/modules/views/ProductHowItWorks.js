@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
+import { withStyles } from '@mui/styles';
+import { Grid, Container } from '@mui/material';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
 import { Link } from "react-router-dom";
