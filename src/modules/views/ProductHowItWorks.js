@@ -63,17 +63,17 @@ function ProductHowItWorks(props) {
           className={classes.curvyLines}
           alt="curvy lines"
         />
-        <Typography variant="h4" marked="center" className={classes.title} component="h2">
+        <Typography align="center" variant="h4" className={classes.title} component="h2">
           Our process
         </Typography>
         <div>
-          <Grid container spacing={5}>
+          <Grid container alignItems="center" spacing={5}>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
                 <div className={classes.number}>1.</div>
                 <img
                   src="/productHowItWorks1.svg"
-                  alt="suitcase"
+                  alt="call/text"
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
@@ -109,17 +109,19 @@ function ProductHowItWorks(props) {
             </Grid>
           </Grid>
         </div>
-        <Link to={"/quote"}>
-          <Button
-            color="primary"
-            size="large"
-            variant="contained"
-            className={classes.button}
-            component="a"
-          >
-            Get started
-          </Button>
-        </Link>
+        <Grid container justifyContent="center">
+          <Link to={"/quote"}>
+            <Button
+              style={{ backgroundColor: "#5bd620" }}
+              size="large"
+              variant="contained"
+              className={classes.button}
+              component="a"
+            >
+              Get started
+            </Button>
+          </Link>
+        </Grid>
       </Container>
     </section>
   );
