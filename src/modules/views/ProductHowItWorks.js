@@ -36,7 +36,8 @@ const styles = (theme) => ({
     fontWeight: theme.typography.fontWeightMedium,
   },
   image: {
-    height: 55,
+    height: 205,
+    zIndex: 1,
     marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
   },
@@ -72,7 +73,7 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>1.</div>
                 <img
-                  src="/productHowItWorks1.svg"
+                  src="/calltext.jpg"
                   alt="call/text"
                   className={classes.image}
                 />
@@ -85,7 +86,7 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>2.</div>
                 <img
-                  src="/productHowItWorks2.svg"
+                  src="/chooseprogram.jpg"
                   alt="graph"
                   className={classes.image}
                 />
@@ -98,7 +99,7 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>3.</div>
                 <img
-                  src="/productHowItWorks3.svg"
+                  src="/pestfree.jpg"
                   alt="clock"
                   className={classes.image}
                 />
@@ -112,7 +113,7 @@ function ProductHowItWorks(props) {
         <Grid container justifyContent="center">
           <Link to={"/quote"}>
             <Button
-              style={{ backgroundColor: "#5bd620" }}
+              style={{ backgroundColor: "#5bd620", marginTop: 20 }}
               size="large"
               variant="contained"
               className={classes.button}

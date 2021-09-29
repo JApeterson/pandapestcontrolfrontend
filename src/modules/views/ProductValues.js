@@ -23,7 +23,8 @@ const styles = (theme) => ({
     padding: theme.spacing(0, 5),
   },
   image: {
-    height: 105,
+    height: 380,
+    zIndex: 1
   },
   title: {
     marginTop: theme.spacing(5),
@@ -52,13 +53,13 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/scorpion.jpg"
+                src="/scorpioncontrol.jpg"
                 alt="scorpion"
               />
-              <Typography variant="h6" className={classes.title}>
+              <Typography variant="h4" className={classes.title}>
                 Scorpion Control
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h6">
                 {'Scorpions are some of the most persistent and aggressive pests in Arizona. Enjoy a scorpion-free home with our effective treatment'}
               </Typography>
             </div>
@@ -67,13 +68,13 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/mosquito.jpg"
+                src="/mosquitocontrol.jpg"
                 alt="mosquito"
               />
-              <Typography variant="h6" className={classes.title}>
+              <Typography variant="h4" className={classes.title}>
                 Mosquito Control
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h6">
                 {'Mosquitos can be difficult to control, especially after the monsoon season and during the months of extreme heat. Our Panda pest professionals can keep them out of your backyard.'}
               </Typography>
             </div>
@@ -82,13 +83,13 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/mouse.jpeg"
+                src="/rodentcontrol.jpg"
                 alt="mouse"
               />
-              <Typography variant="h6" className={classes.title}>
+              <Typography variant="h4" className={classes.title}>
                 Rodent Control
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h6" >
                 {'Our state of the art approach to rodent control has revolutionized and accelerated the way we control mice and rats in your home or business. '}
               </Typography>
             </div>
