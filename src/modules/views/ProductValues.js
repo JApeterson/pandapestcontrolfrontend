@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@mui/styles';
-import { Grid, Container } from '@mui/material';
+import { Grid, Container, Link, Button } from '@mui/material';
 import Typography from '../components/Typography';
 
 const styles = (theme) => ({
@@ -12,7 +12,7 @@ const styles = (theme) => ({
   },
   container: {
     marginTop: theme.spacing(15),
-    marginBottom: theme.spacing(30),
+    marginBottom: theme.spacing(15),
     display: 'flex',
     position: 'relative',
   },
@@ -93,6 +93,18 @@ function ProductValues(props) {
               </Typography>
             </div>
           </Grid>
+        </Grid>
+        <Grid container justifyContent="center">
+          <Link to={"/quote"}>
+            <Button
+              style={{ textAlign: 'center', backgroundColor: '#5bd620', marginTop: 100 }}
+              variant="contained"
+              size="large"
+              component="a"
+            >
+              Get Pricing
+            </Button>
+          </Link>
         </Grid>
       </Container>
     </section>

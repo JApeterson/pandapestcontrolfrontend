@@ -47,25 +47,21 @@ function ProductHero(props) {
             <span style={{ color: "#5bd620" }}>{'Clean'}</span> {'pest control, for your lifestyle'}
           </Typography>
         </Grid>
-        <Grid container justifyContent="center">
-          <Link to={"/quote"}>
-            <Button
-              style={{ textAlign: 'center', backgroundColor: '#5bd620', }}
-              variant="contained"
-              size="large"
-              component="a"
-            >
-              Get Pricing
-            </Button>
-          </Link>
-        </Grid>
+        <Link to={"/quote"}>
+          <Button
+            style={{ textAlign: 'center', backgroundColor: '#5bd620', marginTop: 100 }}
+            variant="contained"
+            size="large"
+            component="a"
+          >
+            Get Pricing
+          </Button>
+        </Link>
         <Grid item xs={12}>
-
-          <Typography>{`Panda Pest Control is Arizona's top rated eco-friendly pest control service. With over a decade of pest control experience, our team of pest control professionals are trained and equipped to protect your home or business. Using cutting edge technology along with best green pest control products, Panda Pest Control is able to deliver the best results.
-      Although we are best known for our success rate in scorpion control; our five step regular protection program is what has disrupted the pest control industry in Arizona.Find out why we are Arizona's premier pest control company.`}
+          <Typography align='center'>Panda Pest Control is Arizona's top rated eco-friendly pest control service. With over a decade of pest control experience, our team of pest control professionals are trained and equipped to protect your home or business. Using cutting edge technology along with best green pest control products, Panda Pest Control is able to deliver the best results.
+            Although we are best known for our success rate in scorpion control; our five step regular protection program is what has disrupted the pest control industry in Arizona.Find out why we are Arizona's premier pest control company.
           </Typography>
         </Grid>
-
       </Grid>
     </ProductHeroLayout>
   );
