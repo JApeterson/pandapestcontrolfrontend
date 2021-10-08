@@ -45,10 +45,10 @@ const styles = (theme) => ({
     zIndex: -2,
     backgroundImage: 'url(./public/slideshow1.jpg)',
   },
-  arrowDown: {
-    position: 'absolute',
-    bottom: theme.spacing(4),
-  },
+  // arrowDown: {
+  //   position: 'absolute',
+  //   bottom: theme.spacing(4),
+  // },
 });
 
 function ProductHeroLayout(props) {
@@ -60,13 +60,13 @@ function ProductHeroLayout(props) {
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />
-        <img
+        {/* <img
           className={classes.arrowDown}
           src="/productHeroArrowDown.png"
           height="16"
           width="12"
           alt="arrow down"
-        />
+        /> */}
       </Container>
     </section>
   );
