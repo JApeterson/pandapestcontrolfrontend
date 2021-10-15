@@ -52,36 +52,36 @@ function Quote() {
 
           <Formik
             initialValues={{
-              contactViaText: false,
-              email: "",
-              referral: "None",
-              fullName: "",
-              phoneNumber: "",
-              streetAddress: "",
-              city: "",
-              zip: "",
-              sqft: ""
+              TextMessage: false,
+              Email: "",
+              Source: "None",
+              FullName: "",
+              PhoneNumber: "",
+              Address: "",
+              City: "",
+              ZIP: "",
+              SQFT: ""
             }}
             validationSchema={Yup.object().shape({
-              email: Yup.string()
+              Email: Yup.string()
                 .email("Must be a valid email")
                 .max(255)
                 .required("Email is required"),
             })}
             onSubmit={async (values) => {
+              if (values.TextMessage) values.TextMessage = 'Yes'
+              if (!values.TextMessage) values.TextMessage = 'No'
+              // 418222268621-g5h9ms0o4t8cs4kb3k8ocmvvi80f6s07.apps.googleusercontent.com
               try {
                 axios.post(
                   `https://sheet.best/api/sheets/7d44312f-42e3-4de2-bba3-7f5eda0208ea`, values
                 ).then((res) => {
                   setFormSent(true)
-                  setUsersFullName(res.data[0].fullName)
+                  setUsersFullName(res.data[0].FullName)
                 })
-                /*const newUser = await Auth.signUp({
-                  username: values.email,
-                  password: values.password,
-                });*/
                 setNewUser(newUser);
               } catch (e) {
+                console.log("Quote error", e)
               }
             }}
           >
@@ -98,120 +98,120 @@ function Quote() {
                 <Box mb={3}>
                 </Box>
                 <TextField
-                  error={Boolean(touched.fullName && errors.fullName)}
+                  error={Boolean(touched.FullName && errors.FullName)}
                   fullWidth
-                  helperText={touched.fullName && errors.fullName}
+                  helperText={touched.FullName && errors.FullName}
                   label="Full Name"
                   margin="normal"
-                  name="fullName"
+                  name="FullName"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={values.fullName}
+                  value={values.FullName}
                   variant="outlined"
                 />
                 <TextField
-                  error={Boolean(touched.email && errors.email)}
+                  error={Boolean(touched.Email && errors.Email)}
                   fullWidth
-                  helperText={touched.email && errors.email}
+                  helperText={touched.Email && errors.Email}
                   label="Email Address"
                   margin="normal"
-                  name="email"
+                  name="Email"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  type="email"
-                  value={values.email}
+                  type="Email"
+                  value={values.Email}
                   variant="outlined"
                 />
                 <TextField
-                  error={Boolean(touched.phoneNumber && errors.phoneNumber)}
+                  error={Boolean(touched.PhoneNumber && errors.PhoneNumber)}
                   fullWidth
-                  helperText={touched.phoneNumber && errors.phoneNumber}
+                  helperText={touched.PhoneNumber && errors.PhoneNumber}
                   label="Phone Number"
                   margin="normal"
-                  name="phoneNumber"
+                  name="PhoneNumber"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="number"
-                  value={values.phoneNumber}
+                  value={values.PhoneNumber}
                   variant="outlined"
                 />
                 <TextField
                   error={Boolean(
-                    touched.streetAddress && errors.streetAddress
+                    touched.Address && errors.Address
                   )}
                   fullWidth
                   helperText={
-                    touched.streetAddress && errors.streetAddress
+                    touched.Address && errors.Address
                   }
                   label="Street Address"
                   margin="normal"
-                  name="streetAddress"
+                  name="Address"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="text"
-                  value={values.streetAddress}
+                  value={values.Address}
                   variant="outlined"
                 />
                 <TextField
                   error={Boolean(
-                    touched.city && errors.city
+                    touched.City && errors.City
                   )}
                   fullWidth
                   helperText={
-                    touched.city && errors.city
+                    touched.City && errors.City
                   }
                   label="City"
                   margin="normal"
-                  name="city"
+                  name="City"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="text"
-                  value={values.city}
+                  value={values.City}
                   variant="outlined"
                 />
                 <TextField
                   error={Boolean(
-                    touched.zip && errors.zip
+                    touched.ZIP && errors.ZIP
                   )}
                   fullWidth
                   helperText={
-                    touched.zip && errors.zip
+                    touched.ZIP && errors.ZIP
                   }
                   label="Zip Code"
                   margin="normal"
-                  name="zip"
+                  name="ZIP"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="number"
-                  value={values.zip}
+                  value={values.ZIP}
                   variant="outlined"
                 />
                 <TextField
                   error={Boolean(
-                    touched.sqft && errors.sqft
+                    touched.SQFT && errors.SQFT
                   )}
                   fullWidth
                   helperText={
-                    touched.sqft && errors.sqft
+                    touched.SQFT && errors.SQFT
                   }
                   label="Home Sq Ft"
                   margin="normal"
-                  name="sqft"
+                  name="SQFT"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="number"
-                  value={values.sqft}
+                  value={values.SQFT}
                   variant="outlined"
                 />
                 <Typography> How did you hear about us?</Typography>
                 <TextField
-                  id="outlined referral"
+                  id="outlined Source"
                   select
                   label="Select"
-                  value={values.referral}
+                  value={values.Source}
                   onChange={handleChange}
                   helperText="Please select one"
-                  name="referral"
+                  name="Source"
                 >
                   <MenuItem value="None">
                     <em>None</em>
@@ -227,7 +227,7 @@ function Quote() {
                 <Box alignItems="center" display="flex" ml={-1}>
                   <Checkbox
                     color="primary"
-                    name="contactViaText"
+                    name="TextMessage"
                     onChange={handleChange}
                   />
                   <Typography color="primary" variant="body1">
