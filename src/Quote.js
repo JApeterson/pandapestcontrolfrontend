@@ -45,7 +45,7 @@ function Quote() {
     <React.Fragment>
       <AppAppBar />
       <AppForm>
-        {formSent ? <Typography>Thanks you {usersFullName} for contacting us we will get back to you shortly!</Typography> : <>
+        {formSent ? <Typography>Thanks you {usersFullName} for contacting us, we will get back to you shortly!</Typography> : <>
           <Typography variant="h3" gutterBottom marked="center" align="center">
             Get Pricing
           </Typography>
