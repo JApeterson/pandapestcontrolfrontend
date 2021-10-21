@@ -39,13 +39,13 @@ function ProductHero(props) {
           <img style={{ display: 'none' }} src={'./public/slideshow1.jpg'} alt="Panda workers doing their job." />
         </Grid> */}
       <Grid item xs={12}>
-        <Typography color="inherit" variant="h2" align='center' style={{ position: 'absolute', zIndex: 1 }} >
+        <Typography color="inherit" variant="h2" style={{ position: 'absolute', left: '15%', zIndex: 1 }} >
           <span style={{ color: "#5bd620" }}>{'Clean'}</span> {'pest control, for your lifestyle'}
         </Typography>
         <Carousel indicators={false} animation='slide' stopAutoPlayOnHover={false}>
 
           {
-            images.map((path, i) => <img style={{ width: '100%', height: 800 }} src={path} alt="Panda workers doing their job." />)
+            images.map((path, i) => <img style={{ width: '100%', height: 700 }} src={path} alt="Panda workers doing their job." />)
           }
         </Carousel>
       </Grid>
@@ -53,7 +53,7 @@ function ProductHero(props) {
         <Link to={"/quote"}>
           <Button
             fullWidth
-            style={{ backgroundColor: '#5bd620', marginTop: 60 }}
+            style={{ backgroundColor: '#5bd620', marginTop: 80 }}
             variant="contained"
             size="large"
             component="a"
