@@ -17,23 +17,6 @@ import * as Yup from "yup";
 import { Formik } from "formik";
 import axios from 'axios';
 
-// const useStyles = makeStyles((theme) => ({
-//   form: {
-//     marginTop: theme.spacing(6),
-//   },
-//   button: {
-//     marginTop: theme.spacing(3),
-//     marginBottom: theme.spacing(2),
-//   },
-// formControl: {
-// margin: theme.spacing(1),
-//   minWidth: 520,
-// },
-//   feedback: {
-//     marginTop: theme.spacing(2),
-//   },
-// }));
-
 
 function Quote() {
   const [newUser, setNewUser] = useState(null);

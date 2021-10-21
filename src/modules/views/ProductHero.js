@@ -2,14 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@mui/styles';
 import Button from '../components/Button';
-import ProductHeroLayout from './ProductHeroLayout';
 import { Link } from "react-router-dom";
 import { Typography, Grid } from '@mui/material';
 import Carousel from 'react-material-ui-carousel'
 
 const images = ['slideshow1.jpg', 'slideshow2.jpg', 'slideshow3.jpg', 'slideshow4.jpg', 'slideshow5.jpg', 'slideshow6.jpg']
-// const backgroundImage =
-//  'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
 const styles = (theme) => ({
   background: {
     backgroundImage: `url('slideshow1.jpg')`,
@@ -29,15 +26,11 @@ const styles = (theme) => ({
 });
 
 function ProductHero(props) {
-  const { classes } = props;
 
   return (
-    // <ProductHeroLayout backgroundClassName={classes.background}>
     <Grid container justifyContent="center" spacing={12}>
 
-      {/* <Grid item xs={12}>
-          <img style={{ display: 'none' }} src={'./public/slideshow1.jpg'} alt="Panda workers doing their job." />
-        </Grid> */}
+
       <Grid item xs={12}>
         <Typography color="inherit" variant="h2" style={{ position: 'absolute', left: '15%', zIndex: 1 }} >
           <span style={{ color: "#5bd620" }}>{'Clean'}</span> {'pest control, for your lifestyle'}
@@ -70,7 +63,6 @@ function ProductHero(props) {
         <br />
       </Grid>
     </Grid>
-    // </ProductHeroLayout >
   );
 }
 
