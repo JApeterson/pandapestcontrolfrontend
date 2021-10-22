@@ -43,7 +43,7 @@ const styles = (theme) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     zIndex: -2,
-    // backgroundImage: 'url(slideshow1.jpg)',
+    backgroundImage: 'url(./public/slideshow1.jpg)',
   },
   // arrowDown: {
   //   position: 'absolute',
